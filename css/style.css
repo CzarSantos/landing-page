@@ -464,7 +464,7 @@ footer i {
   font-weight: bold;
   font-size: 19px;
   border-left: 5px solid rgb(255, 0, 0);
-  border-left: 5px solid rgb(0, 183, 255);
+  /*border-left: 5px solid rgb(0, 183, 255);*/
   padding-left: 5px;
   margin-left: 5px;
 }
