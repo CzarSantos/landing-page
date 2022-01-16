@@ -18,6 +18,7 @@
   --btn-hover-bg: #fff;
   --btn-hover-ft: #000;
   --btn-border: #000;
+  --bg-sobre-back: rgb(207, 210, 211);
   --bg-sobre: rgb(241, 244, 245);
 
   --sombra: rgb(241, 241, 241);
@@ -28,7 +29,7 @@
 
 .dark:root {
   --padrao: #202325;
-  --menu: #000;
+  --menu: #191b1d;
   --menu-mobile: #000;
   --font-menu: #fff;
   --border: #fff;
@@ -40,6 +41,7 @@
   --btn-hover-ft: #fff;
   --btn-border: #fff;
   --bg-sobre: #191b1d;
+  --bg-sobre-back: #191b1d;
 
   --sombra: rgba(36, 36, 36, 0.774);
   --box-item: rgb(32, 32, 32);
@@ -185,9 +187,8 @@ a {
 
 .content-left h2 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: 0.1em;
-  text-transform: lowercase;
 }
 
 .content .content-left .btn {
@@ -282,6 +283,15 @@ footer i {
   margin-left: 10px;
 }
 
+footer i,
+a {
+  color: #fff;
+}
+
+footer i:hover {
+  color: #23babf;
+}
+
 #btn-menu {
   display: none;
 }
@@ -330,13 +340,13 @@ footer i {
   }
 }
 
-#titulo-type {
+#titulo-type,
+#titulo-first {
   font-size: 32px;
-  font-weight: 500;
-  padding: 10px 0;
+  font-weight: bold;
+  padding: 5px 0;
   margin-bottom: 10px;
   line-height: 32px;
-  letter-spacing: 0.1rem;
 }
 
 /* Animação do CURSOR */
@@ -415,6 +425,12 @@ footer i {
   .grid-projects {
     grid-template-columns: repeat(1, 1fr);
   }
+  .text-ap p {
+    text-align: center;
+  }
+  #titulo-type {
+    text-align: center;
+  }
 }
 
 /*SOBRE-------------------------------------------------*/
@@ -463,8 +479,7 @@ footer i {
   letter-spacing: 0.1em;
   font-weight: bold;
   font-size: 19px;
-  border-left: 5px solid rgb(255, 0, 0);
-  /*border-left: 5px solid rgb(0, 183, 255);*/
+  border-left: 5px solid rgb(0, 183, 255);
   padding-left: 5px;
   margin-left: 5px;
 }
@@ -503,28 +518,31 @@ footer i {
   color: var(--padrao-font);
   width: 100%;
   min-height: 400px;
-  background: var(--bg-sobre);
+  background: var(--bg-sobre-back);
   /*box-shadow: inset 1px 1px 50px 0px var(--padrao);*/
 }
 
 .dark .apresentation::after {
-  display: none;
+  /* display: none;*/
+  background-image: url(waves-dark.svg);
 }
 
 .apresentation::after {
   content: "";
   position: absolute;
   top: -50px;
-  left: 0;
+  left: 0px;
   right: 0;
   bottom: 0;
+  margin: 0;
+  padding: 0;
 
   display: block;
   height: 52px;
   background-image: url(waves.svg);
   background-repeat: repeat-x;
-  background-size: contain;
-  background-position: center center;
+  /*background-size: contain;
+  background-position: center center;*/
 }
 
 .text-ap {
@@ -534,5 +552,19 @@ footer i {
 
   padding-bottom: 50px;
   letter-spacing: 0.1em;
-  line-height: 22px;
+  line-height: 24px;
+}
+
+.text-ap .formacao {
+  padding-top: 30px;
+}
+
+.text-ap p span {
+  font-weight: bold;
+}
+
+.who p {
+  text-align: center;
+  color: #7c8288;
+  position: relative;
 }
