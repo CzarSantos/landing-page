@@ -18,7 +18,7 @@
   --btn-hover-bg: #fff;
   --btn-hover-ft: #000;
   --btn-border: #000;
-  --bg-sobre-back: rgb(207, 210, 211);
+  --bg-sobre-back: #ececec;
   --bg-sobre: rgb(241, 244, 245);
 
   --sombra: rgb(241, 241, 241);
@@ -188,7 +188,6 @@ a {
 .content-left h2 {
   font-size: 32px;
   font-weight: bold;
-  letter-spacing: 0.1em;
 }
 
 .content .content-left .btn {
@@ -386,7 +385,7 @@ footer i:hover {
 
 .grid-a {
   max-width: 300px;
-  min-height: 320px;
+  min-height: 280px;
 
   overflow: hidden;
   padding: 15px;
@@ -399,7 +398,7 @@ footer i:hover {
 }
 
 .img-grid {
-  height: 200px;
+  min-height: 145px;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -514,10 +513,10 @@ footer i:hover {
 .apresentation {
   position: relative;
   margin-top: 60px;
-  padding-top: 80px;
+  padding-top: 10px;
   color: var(--padrao-font);
   width: 100%;
-  min-height: 400px;
+  min-height: 300px;
   background: var(--bg-sobre-back);
   /*box-shadow: inset 1px 1px 50px 0px var(--padrao);*/
 }
@@ -563,8 +562,36 @@ footer i:hover {
   font-weight: bold;
 }
 
+/*Cursos*/
+.cursos {
+  padding-top: 30px;
+}
+.cursos .title-curso {
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 19px;
+}
+.cursos .item-1 {
+  max-width: 600px;
+  min-height: 30px;
+  background: var(--padrao);
+  color: var(--padrao-font);
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 .who p {
   text-align: center;
   color: #7c8288;
   position: relative;
+}
+
+@media (max-width: 850px) {
+  .apresentation {
+    margin-top: 150px;
+  }
 }

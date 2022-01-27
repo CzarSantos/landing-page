@@ -63,7 +63,7 @@
         <p>Front-end Developer | Web Designer | UI/UX</p>
 
       </div>
-      <button class="btn"><a href="#sobre">More</a></button>
+      <button class="btn"><a href="https://www.linkedin.com/in/juliocssantos/" target="_blank"><i class="fab fa-linkedin-in"> </i> Linkedin</a></button>
     </div>
 
 
@@ -76,48 +76,34 @@
 
     <div class="text-ap">
       <h3 id="titulo-type">Sobre mim</h3>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      <p>Eu sou o Julio, tenho 22 anos, a um tempo descobrir no Front-end uma paixão. Estou sempre tentando aprender coisas novas e me mantendo ligado nas exigências do mercado, busco aperfeiçoar minhas habilidades e entregar qualidade em tudo que eu fizer.</p>
 
       <div class="formacao">
-        <p><span>Faculdade São Vicente - </span> Análise e Desenvolvimento de sistemas</p>
-        <p><span>Centro Paula Souza - </span> Técnico em Informática</p>
+        <p><span>Faculdade São Vicente - </span> Análise e Desenvolvimento de sistemas(2021)</p>
+        <p><span>ETEC - Centro Paula Souza - </span> Técnico em Informática(2016)</p>
       </div>
-      <!-- <progress id="skills" value="90" max="100"></progress> 90% -->
+
+      <div class="cursos">
+        <h3 class="title-curso">Alguns cursos</h3>
+        <div class="item-1">
+          <span>Javascript(em andamento)</span>
+          <span>30h</span>
+        </div>
+        <div class="item-1">
+          <span>Web Design</span>
+          <span>30h</span>
+        </div>
+        <div class="item-1">
+          <span>Fundamentos Scrum</span>
+          <span>30h</span>
+        </div>
+
+      </div>
+
     </div>
 
 
-
   </section>
-
-  <script>
-    //Pega o proprio elemento 
-    function typeWriter(elemento) {
-      //Array para pegar o texto/letras
-      //metodo 'split()' divide texto em diferentes partes
-      const textoArray = elemento.innerHTML.split('');
-      elemento.innerHTML = '' //limpa html
-
-      //acessar cada letra do array
-      //'i' - index
-      textoArray.forEach((letra, i) => {
-        //animar com o tempo
-        setTimeout(() =>
-          elemento.innerHTML += letra, 75 * i)
-        //adiciona uma letra seguida da outra
-        // vezes o index
-      });
-
-
-    }
-
-    setInterval(() => { typeWriter(titulo) }, 10000);
-
-
-
-    const titulo = document.querySelector('#titulo-type')
-    typeWriter(titulo)//elemento titulo
-
-  </script>
 
   <!--content-->
   <section class='content-sobre container'>
@@ -169,37 +155,31 @@
       <div class="grid-projects">
 
         <div class="grid-a">
-          <img class="img-grid" src="/img/code2.png" alt="">
-          <div class="title-grid">juliocssantos.com</div>
-          <p>My personal website</p>
-        </div>
-
-        <div class="grid-a">
-          <img class="img-grid" src="/img/code2.png" alt="">
+          <img class="img-grid" src="/img/b1.png" alt="">
           <div class="title-grid">Bikcraft</div>
           <p>Website to a bike store</p>
         </div>
 
         <div class="grid-a">
-          <img class="img-grid" src="/img/code2.png" alt="">
-          <div class="title-grid">Snaake Game</div>
-          <p>simple snake game classsic using js</p>
+          <img class="img-grid" src="/img/d.png" alt="">
+          <div class="title-grid">dev.finance</div>
+          <p>Aplicação web para controle financeiro </p>
         </div>
 
         <div class="grid-a">
-          <img class="img-grid" src="/img/code2.png" alt="">
+          <img class="img-grid" src="/img/i.png" alt="">
           <div class="title-grid">Insta clone</div>
           <p>Clone UI</p>
         </div>
 
         <div class="grid-a">
-          <img class="img-grid" src="/img/code2.png" alt="">
+          <img class="img-grid" src="/img/n.png" alt="">
           <div class="title-grid">Clone Netflix</div>
           <p>Clone UI</p>
         </div>
 
         <div class="grid-a">
-          <img class="img-grid" src="/img/code2.png" alt="">
+          <img class="img-grid" src="/img/c.png" alt="">
           <div class="title-grid">CodePen</div>
           <p>Codepen projects</p>
         </div>
