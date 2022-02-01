@@ -24,7 +24,9 @@
   --sombra: rgb(241, 241, 241);
   --box-item: #fff;
 
-  --border-grid: (#f1f1f1);
+  --border-grid: #ece8e8;
+  --footer: #fff;
+  --border-footer: #ece8e8;
 }
 
 .dark:root {
@@ -46,7 +48,9 @@
   --sombra: rgba(36, 36, 36, 0.774);
   --box-item: rgb(32, 32, 32);
 
-  --border-grid: (#000);
+  --border-grid: rgb(48, 47, 47);
+  --footer: #202325;
+  --border-footer: rgb(48, 47, 47);
 }
 
 * {
@@ -78,6 +82,8 @@ a {
   padding: 5px;
   transition: 0.8s;
   z-index: 1000;
+
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 8px 12px rgb(0 0 0 / 4%);
 }
 .menu .align {
   display: flex;
@@ -272,9 +278,11 @@ footer {
   bottom: 0;
   left: 0;
   color: white;
-  background: #000;
+  background: var(--footer);
+  border-top: 1px solid var(--border-footer);
+
   width: 100%;
-  padding: 5px;
+  padding: 8px;
   text-align: center;
 }
 
@@ -284,7 +292,7 @@ footer i {
 
 footer i,
 a {
-  color: #fff;
+  color: var(--padrao-font);
 }
 
 footer i:hover {
@@ -389,31 +397,48 @@ footer i:hover {
 
   overflow: hidden;
   padding: 15px;
-  border: 1px solid var(--border-grid);
-  box-shadow: 0 1px 3px var(--border-grid);
+
   border-radius: 5px;
 
   background: var(--bg-sobre);
-  color: var(--padrao-font);
+
+  border: 1px solid var(--border-grid);
+  box-shadow: 0 1px 3px var(--border-grid);
 }
 
-.img-grid {
+.grid-a .img-grid {
   min-height: 145px;
   width: 100%;
   background-size: cover;
   background-position: center;
+  transition: 0.6s;
 }
 
-.title-grid {
+.grid-a .title-grid {
   font-weight: bolder;
   font-size: 21px;
   letter-spacing: 0.1em;
   padding: 5px 0;
+  color: var(--padrao-font);
+}
+.grid-a p {
+  color: var(--padrao-font);
+}
+
+.grid-a a img:hover {
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: 0.6s;
+}
+.grid-a a .title-grid:hover {
+  color: #23babf;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 850px) {
   .grid-projects {
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
   }
   .grid-a {
     margin: 0 auto;
@@ -570,7 +595,7 @@ footer i:hover {
   margin-bottom: 10px;
   letter-spacing: 0.1em;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 16px;
 }
 .cursos .item-1 {
   max-width: 600px;
