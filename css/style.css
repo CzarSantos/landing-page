@@ -510,9 +510,13 @@ footer i:hover {
 
 .item-hab {
   padding: 5px 15px;
-  background: #000;
-  color: #fff;
+  /*background: #000;
+  color: #fff;*/
+  border: 1px solid var(--font-menu);
+  color: var(--font-menu);
+
   border-radius: 30px;
+  cursor: default;
 }
 
 .lista-others {
@@ -546,12 +550,12 @@ footer i:hover {
   /*box-shadow: inset 1px 1px 50px 0px var(--padrao);*/
 }
 
-.dark .apresentation::after {
+.dark .apresentation::before {
   /* display: none;*/
   background-image: url(waves-dark.svg);
 }
 
-.apresentation::after {
+.apresentation::before {
   content: "";
   position: absolute;
   top: -50px;
@@ -563,9 +567,10 @@ footer i:hover {
 
   display: block;
   height: 52px;
-  background-image: url(waves.svg);
   background-repeat: repeat-x;
-  /*background-size: contain;
+  background-image: url(waves.svg);
+  /*
+  background-size: contain;
   background-position: center center;*/
 }
 
@@ -619,4 +624,27 @@ footer i:hover {
   .apresentation {
     margin-top: 150px;
   }
+}
+
+/*SCROLL Animação*/
+
+/* Seleção de todos os data-anime */
+[data-anime] {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+[data-anime="left"] {
+  /*x  - y - z*/
+  transform: translate3d(-50px, 0, 0); /* -50 para esquerda */
+}
+
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0); /* -50 para esquerda */
+}
+
+/* Classe adicionada no JS */
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }

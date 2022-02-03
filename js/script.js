@@ -52,3 +52,54 @@ btn.addEventListener('click', addMenu)
 
 
 
+//Scroll
+
+const target = document.querySelectorAll('[data-anime]')
+const animationClass = 'animate'; 
+
+//debounce
+
+const debounce = function(func, wait, immediate) {
+  let timeout;
+  return function(...args) {
+    const context = this;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+//function
+function animeScroll(){
+  //istancoia da barra de scroll ao topo do site
+  const windowTop = window.pageYOffset + ((window.innerHeight * 3)/4);
+  //Falar com cada elemento em relação ao topo
+  target.forEach(function(element){
+    //comparar se altura da janela é maior q a do elemento
+    if((windowTop)> element.offsetTop){
+      element.classList.add(animationClass)
+    }else{
+      //remover
+      element.classList.remove(animationClass)
+    }
+  })
+}
+
+//ativar quando o site é acessado
+animeScroll();
+
+
+//se igual a '0'(false) não executa | verifica quantidade de elemento   
+if(target.length){
+//window : objeto geral
+window.addEventListener('scroll',debounce(function(){
+animeScroll();
+},150))
+}
+//diminuir quantidade de ativação com 'debounce',200(time)
+
