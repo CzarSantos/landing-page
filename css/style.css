@@ -462,6 +462,7 @@ footer i:hover {
 .content-sobre {
   margin-top: 100px;
   margin-bottom: 100px;
+  padding: 0px 5px;
   align-items: center;
   color: var(--padrao-font);
 
@@ -624,27 +625,4 @@ footer i:hover {
   .apresentation {
     margin-top: 150px;
   }
-}
-
-/*SCROLL Animação*/
-
-/* Seleção de todos os data-anime */
-[data-anime] {
-  opacity: 0;
-  transition: 0.3s;
-}
-
-[data-anime="left"] {
-  /*x  - y - z*/
-  transform: translate3d(-50px, 0, 0); /* -50 para esquerda */
-}
-
-[data-anime="right"] {
-  transform: translate3d(50px, 0, 0); /* -50 para esquerda */
-}
-
-/* Classe adicionada no JS */
-[data-anime].animate {
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px);
 }
