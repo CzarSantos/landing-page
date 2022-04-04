@@ -31,8 +31,6 @@ function sscrollToPosition(to){
 
 
 
-//13:26 https://www.youtube.com/watch?v=tzbpAqb2Wjc
-
 
 /**
  * Smooth scroll animation

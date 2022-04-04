@@ -5,6 +5,33 @@
 }
 */
 :root {
+  --padrao: #202325;
+  --menu: #191b1d;
+  --menu-mobile: #000;
+  --font-menu: #fff;
+  --border: #fff;
+  --menu-icon: #fff;
+  --padrao-font: #fff;
+  --btn: #fff;
+  --btn-font: #000;
+  --btn-hover-bg: #000;
+  --btn-hover-ft: #fff;
+  --btn-border: #fff;
+  --bg-sobre: #191b1d;
+  --bg-sobre-back: #191b1d;
+
+  --sombra: rgba(36, 36, 36, 0.774);
+  --box-item: rgb(32, 32, 32);
+
+  --border-grid: rgb(48, 47, 47);
+  --footer: #202325;
+  --border-footer: rgb(48, 47, 47);
+
+}
+
+.dark:root {
+
+  /*------------------------------*/
   --padrao: #fbfbfb;
   --menu: #fff;
   --menu-icon: #000;
@@ -27,30 +54,6 @@
   --border-grid: #ece8e8;
   --footer: #fff;
   --border-footer: #ece8e8;
-}
-
-.dark:root {
-  --padrao: #202325;
-  --menu: #191b1d;
-  --menu-mobile: #000;
-  --font-menu: #fff;
-  --border: #fff;
-  --menu-icon: #fff;
-  --padrao-font: #fff;
-  --btn: #fff;
-  --btn-font: #000;
-  --btn-hover-bg: #000;
-  --btn-hover-ft: #fff;
-  --btn-border: #fff;
-  --bg-sobre: #191b1d;
-  --bg-sobre-back: #191b1d;
-
-  --sombra: rgba(36, 36, 36, 0.774);
-  --box-item: rgb(32, 32, 32);
-
-  --border-grid: rgb(48, 47, 47);
-  --footer: #202325;
-  --border-footer: rgb(48, 47, 47);
 }
 
 * {
@@ -531,7 +534,7 @@ footer i:hover {
 }
 
 /*Waves*/
-.waves {
+/* .waves {
   display: block;
   height: 52px;
   background-image: url(waves.svg);
@@ -539,7 +542,7 @@ footer i:hover {
   background-size: contain;
   background-position: center center;
 }
-
+ */
 .apresentation {
   position: relative;
   margin-top: 60px;
@@ -553,7 +556,7 @@ footer i:hover {
 
 .dark .apresentation::before {
   /* display: none;*/
-  background-image: url(waves-dark.svg);
+  background-image: url(waves.svg);
 }
 
 .apresentation::before {
@@ -569,7 +572,7 @@ footer i:hover {
   display: block;
   height: 52px;
   background-repeat: repeat-x;
-  background-image: url(waves.svg);
+  background-image: url( waves-dark.svg);
   /*
   background-size: contain;
   background-position: center center;*/
@@ -624,5 +627,32 @@ footer i:hover {
 @media (max-width: 850px) {
   .apresentation {
     margin-top: 150px;
+  }
+}
+
+
+/* Animação Scrool */
+
+[data-anime]{
+  opacity: 0; /* começa off */
+  transition: 1s;
+}
+
+[data-anime="left"]{
+  transform: translate3d(-100%,0,0);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime="rigth"]{
+  transform: translate3d(50px,0,0);/* cima/baixo - esquerda/direita -  profundidade */
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+@media (max-width: 1850px) {
+  [data-anime="rigth"]{
+    transform: translate3d(0,-100%,0);/* cima/baixo - esquerda/direita -  profundidade */
   }
 }

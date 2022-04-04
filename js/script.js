@@ -1,5 +1,7 @@
 
-//MENU
+//DarkMode--------------------------------------------------
+
+
 const $html = document.querySelector('html')
 const $checkbox = document.querySelector('#checkbox')
 
@@ -8,6 +10,8 @@ $checkbox.addEventListener('change', function(){
   
 })
 
+
+//MENU-------------------------------------------------
 
 const btn = document.querySelector('#btn-menu')
 
@@ -51,3 +55,34 @@ btn.addEventListener('click', addMenu)
     typeWriter(titulo)//elemento titulo
 
 
+
+
+    /* EVENTO SCROLL --------------------------------------- */
+
+    const item = document.querySelectorAll('[data-anime]');
+
+    const animeScroll = () => {
+
+      //top da pagina
+      const windowTop = window.pageYOffset + window.innerHeight * 0.75
+      
+      item.forEach(element => {
+        //se distancia da tela para o topo for maior que a distancia do meu elemento para o topo
+        if(windowTop > element.offsetTop){
+          element.classList.add('animate')
+        }else{
+          element.classList.remove('animate')
+        }
+      })
+
+      
+    
+
+    }
+
+    //execução
+    animeScroll()
+
+    window.addEventListener('scroll', ()=>{
+      animeScroll()
+    })
